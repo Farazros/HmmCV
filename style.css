@@ -174,7 +174,7 @@ footer {
     margin: 10px 0; /* Lägg till marginal mellan knapparna */
     transition: background-color 0.3s ease, color 0.3s ease; /* Gör färgändringen smidig vid hover */
     display: none; /* Dölj knapparna som standard */
-    padding: 10px 20px; /* Lägg till padding */
+    padding: 10px 112px; /* Lägg till padding */
     border-radius: 5px; /* Rundade hörn */
     background-color: #66BBFF; /* Ljusblå bakgrundsfärg för knapparna */
 }
