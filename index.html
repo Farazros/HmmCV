@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+         <!-- Detta kommando skapar en kommentar som inte "syns" /FARAZ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faraz portfolio</title>
+
+        <!--Kopplingen till style.css-->
+    <link rel="stylesheet" href="style.css">
+
+        <!--Mina Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    
+          <!-- Strukturen för min hemsida är följande: header, nav, div, footer.-->
+    <header>
+        <h1>Faraz</h1>
+    </header>
+
+    <nav>
+        <a href="https://www.google.com" class="hover-button">Projekt</a>
+    </nav>
+
+    <div class="about">
+        <img src="bild.jpg" alt="Mitt foto">
+        <h2>Om Mig</h2>
+        <p>Hej!<br> Jag heter Faraz.</p>
+    </div>
+
+    <div class="contact">
+        <h2>Kontakt</h2>
+
+            <!-- Brevikon och e-postlänk. Använder mig av Non-breaking space för att skapa mellanrum till brevikonen(&nbsp;)-->
+        <p>Mail: &nbsp;<a href="mailto:rofa24sb@student.ju.se" class="email-link">
+        <span class="material-icons email-icon">mail</span> rofa24sb@student.ju.se</a></p>
+            <!-- Sociala medier etc. -->
+        <p><a href="https://se.linkedin.com/in/faraz-rostami-43989b172" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/Farazros" target="_blank">GitHub</a></p>
+    </div>
+
+          <!-- Checkbox för att göra sidopanelen klickbar-->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+         <!-- Menyknapp som fungerar som en etikett för att toggla checkboxen -->
+    <label for="sidebar-toggle" class="menu-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </label>
+
+            <!-- Sidopanelen -->
+    <div class="sidebar">
+        <label for="sidebar-toggle" class="menu-button sidebar-toggle-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+            <!-- Fungerande knappar i sidopanelen-->
+        <a href="https://www.google.com" class="sidebar-link">Google</a>
+        <a href="https://www.google.com" class="sidebar-button">Galleri</a> 
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Faraz. Alla rättigheter förbehållna.</p>
+    </footer>
+
+</body>
+
+</html>

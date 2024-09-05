@@ -1,0 +1,218 @@
+/* Allmänna stilar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* Ljusblå bakgrund */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #003366; /* Mörkblå header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif; /* Google Font Lato */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px; /* Mer utrymme från vänster */
+}
+
+.hover-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #00509e; /* Blå bakgrundsfärg för knapparna */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hover-button:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: #003d7a; /* Mörkare blå vid hover */
+}
+
+.about {
+    display: flex;
+    flex-direction: column; /* Ändra layouten till kolumn */
+    align-items: flex-start; /* Justera allt till vänster */
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Stil för bilden i "Om mig"-sektionen */
+.about img {
+    display: block;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Lägg till marginal under bilden för att separera texten */
+}
+
+/* Stil för knappen i "Om mig"-sektionen */
+.about .hover-button {
+    align-self: flex-start; /* Justera knappen till vänster i förhållande till bilden */
+    margin-bottom: 20px; /* Lägg till marginal under knappen för att separera texten */
+}
+
+/* Stil för texten */
+.about , .about p {
+    margin: 0; /* Ta bort eventuell standardmarginal för att undvika oönskade mellanrum */
+}
+
+h2 {
+    color: #003366; /* Mörkblå för rubriker */
+}
+
+.contact {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+a {
+    color: #00509e; /* Blå färg för länkar */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #003366; /* Mörkblå footer */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Stil för Mail icon */
+.Material-Icons {
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #00509e; /* Blå för ikoner */
+    font-size: 24px;
+}
+
+/* Stil för e-postlänk */
+.email-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.email-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Gör ikonen animerad */
+    color: #00509e;
+}
+
+/* Hover-effekt för att förstora ikonen */
+.email-link:hover .email-icon {
+    transform: scale(1.5); /* Förstora ikonen vid hover */
+    color: #003d7a; /* Mörkare blå vid hover */
+}
+
+/* Stilar för menyknappen */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Se till att menyknappen ligger ovanpå sidopanelen */
+}
+
+.menu-button .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: background-color 0.3s ease; /* Gör färgändringen smidig vid hover */
+}
+
+/* Sidopanelens stilar */
+.sidebar {
+    width: 0; /* Startbredd är 0 */
+    height: 100vh; /* Full höjd på viewporten */
+    background-color: #00509e; /* Blå bakgrundsfärg för sidopanel */
+    color: #fff; /* Vit textfärg */
+    position: fixed; /* Fixerad position */
+    top: 0;
+    right: 0;
+    overflow-x: hidden; /* Dölj överflödigt innehåll horisontellt */
+    transition: width 0.3s ease; /* Animerar bredden vid öppning */
+    padding: 30px; /* Padding inuti panelen */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrera innehållet horisontellt */
+    justify-content: center; /* Centrera innehållet vertikalt */
+    z-index: 999; /* Ligger under menyknappen men ovanför innehållet */
+}
+
+/* Knappar i sidopanelen */
+.sidebar-link, .sidebar-button {
+    color: #e6f0ff; /* Ljusblå textfärg för knapparna */
+    text-decoration: none; /* Ta bort understrykning */
+    font-size: 18px; /* Justera storleken på texten */
+    margin: 10px 0; /* Lägg till marginal mellan knapparna */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Gör färgändringen smidig vid hover */
+    display: none; /* Dölj knapparna som standard */
+    padding: 10px 20px; /* Lägg till padding */
+    border-radius: 5px; /* Rundade hörn */
+    background-color: #66BBFF; /* Ljusblå bakgrundsfärg för knapparna */
+}
+
+/* Hover-effekt för knapparna */
+.sidebar-link:hover, .sidebar-button:hover {
+    background-color: #99c2ff; /* Ändra bakgrundsfärg vid hover */
+}
+
+/* Dold checkbox */
+.sidebar-toggle {
+    display: none;
+}
+
+/* När sidopanelen är öppen */
+.sidebar-toggle:checked + .menu-button + .sidebar {
+    width: 250px; /* Ny bredd vid öppning */
+}
+
+/* Knapparna endast synliga när sidopanelen är öppen */
+.sidebar-toggle:checked + .menu-button + .sidebar .sidebar-link,
+.sidebar-toggle:checked + .menu-button + .sidebar .sidebar-button {
+    display: inline-block; /* Visa knapparna när sidopanelen är öppen */
+}
+
+/* Stängningsknappens stilar (samma som menyknappen) */
+.sidebar-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.sidebar-toggle-btn .bar {
+    background-color: #fff;
+}
+
+/* Hover-effekt för menyknappen */
+.menu-button:hover .bar {
+    background-color: #ddd; /* Ändra färg vid hover */
+}
