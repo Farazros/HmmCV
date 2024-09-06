@@ -26,23 +26,33 @@
     </header>
 
     <nav>
-        <a href="https://www.google.com" class="hover-button">Projekt</a>
+        <div class="dropdown">
+            <a href="https://www.google.com" class="hover-button">Projekt</a>
+            <div class="dropdown-content">
+                <a href="#about">Profil</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </div>
     </nav>
 
-    <div class="about">
+    <div id="about" class="about">
+            <!-- Kryssknapp som leder tillbaka till index.html -->
+        <a href="index.html" class="close-fullscreen">&times;</a>
         <img src="IMG_SRC/bild.jpg" alt="Mitt foto">
         <h2>Om Mig</h2>
         <p>Hej!<br> Jag heter Faraz.</p>
     </div>
 
-    <div class="contact">
+    <div class id="kontakt" class="contact">
+            <!-- Kryssknapp som leder tillbaka till index.html -->
+        <a href="index.html" class="close-fullscreen">&times;</a>
         <h2>Kontakt</h2>
 
             <!-- Brevikon och e-postlänk. Använder mig av Non-breaking space för att skapa mellanrum till brevikonen(&nbsp;)-->
         <p>Mail: &nbsp;<a href="mailto:rofa24sb@student.ju.se" class="email-link">
         <span class="material-icons email-icon">mail</span> rofa24sb@student.ju.se</a></p>
             <!-- Sociala medier etc. -->
-        <p><a href="https://se.linkedin.com/in/faraz-rostami-43989b172" target="_blank">LinkedIn</a></p>
+        <p><a href="https://se.linkedin.com/in/faraz-rostami-43989b172" target="_blank">LinkedIn</a></p> <!-- _blank öppnar en ny flik istället för en "redirect"-->
         <p><a href="https://github.com/Farazros" target="_blank">GitHub</a></p>
     </div>
 
