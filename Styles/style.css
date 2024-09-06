@@ -271,6 +271,12 @@ footer {
     overflow: auto; /* Möjliggör rullning om innehållet är för stort */
 }
 
+/* Ökar avståndet mellan länkar (a-taggar) i fullskärmsläge */
+#about:target a, h2, #kontakt:target a, h2 {
+    display: block; /* Gör varje länk till ett blockelement (som en paragraf) */
+    margin-bottom: 36px; /* Lägger till 36px avstånd under varje länk */
+}
+
 /* Fullskärmseffekt när "kontakt" är målet */
 #kontakt:target {
     position: fixed;
