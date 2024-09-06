@@ -14,6 +14,7 @@ header {
     padding: 20px;
     text-align: center;
     font-family: 'Lato', sans-serif; /* Google Font Lato */
+    position: relative; /* Gör så att menyknappen kan positioneras relativt till headern */
 }
 
 h1 {
@@ -36,6 +37,7 @@ nav {
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    user-select: none; /* Gör texten i hover-button ej kopierbar. */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -70,7 +72,7 @@ nav {
 
 /* Stil för texten */
 .about , .about p {
-    margin: 0; /* Ta bort eventuell standardmarginal för att undvika oönskade mellanrum */
+    margin: 1; /* Ta bort eventuell standardmarginal för att undvika oönskade mellanrum */
 }
 
 h2 {
@@ -98,7 +100,7 @@ footer {
     padding: 10px;
     background: #003366; /* Mörkblå footer */
     color: white;
-    position: fixed;
+    position: inherit;
     bottom: 0;
     width: 100%;
 }
@@ -118,7 +120,7 @@ footer {
 }
 
 .email-icon {
-    font-size: 24px;
+    font-size: 32px; /* Gör ikonen större */
     margin-right: 10px;
     transition: transform 0.3s ease; /* Gör ikonen animerad */
     color: #00509e;
@@ -132,9 +134,9 @@ footer {
 
 /* Stilar för menyknappen */
 .menu-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: absolute; /* Positionering relativt till header */
+    top: 20px; /* Avstånd från toppen av headern */
+    right: 20px; /* Avstånd från höger sida av headern */
     cursor: pointer;
     z-index: 1000; /* Se till att menyknappen ligger ovanpå sidopanelen */
 }
@@ -159,7 +161,7 @@ footer {
     right: 0;
     overflow-x: hidden; /* Dölj överflödigt innehåll horisontellt */
     transition: width 0.3s ease; /* Animerar bredden vid öppning */
-    padding: 30px; /* Padding inuti panelen */
+    padding: 0px; /* Padding inuti panelen */
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrera innehållet horisontellt */
@@ -172,12 +174,15 @@ footer {
     color: #e6f0ff; /* Ljusblå textfärg för knapparna */
     text-decoration: none; /* Ta bort understrykning */
     font-size: 18px; /* Justera storleken på texten */
-    margin: 10px 0; /* Lägg till marginal mellan knapparna */
+    margin: 10px auto; /* Centrerar knapparna horisontellt */
     transition: background-color 0.3s ease, color 0.3s ease; /* Gör färgändringen smidig vid hover */
     display: none; /* Dölj knapparna som standard */
-    padding: 10px 112px; /* Lägg till padding */
-    border-radius: 5px; /* Rundade hörn */
+    padding: 11px; /* Lägger till padding för bättre knappstorlek */
+    border-radius: 9px; /* Rundade hörn */
     background-color: #66BBFF; /* Ljusblå bakgrundsfärg för knapparna */
+    width: 224px; /* Fast bredd för knapparna */
+    text-align: center; /* Centrera texten inom knappen */
+    box-sizing: border-box; /* Säkerställer att padding inkluderas i bredden */
 }
 
 /* Hover-effekt för knapparna */
