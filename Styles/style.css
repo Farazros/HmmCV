@@ -6,6 +6,7 @@ body, html {
     background-color: #e6f0ff; /* Ljusblå bakgrund */
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Förhindrar horisontell scroll */
 }
 
 header {
@@ -15,6 +16,7 @@ header {
     text-align: center;
     font-family: 'Lato', sans-serif; /* Google Font Lato */
     position: relative; /* Gör så att menyknappen kan positioneras relativt till headern */
+    width: 100%; /* Gör så header går hela vägen ut till kanten */
 }
 
 h1 {
