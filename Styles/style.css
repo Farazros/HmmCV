@@ -140,6 +140,7 @@ footer {
 }
 
 .menu-button .bar {
+    display: block;
     width: 30px;
     height: 3px;
     background-color: #fff;
@@ -288,7 +289,13 @@ footer {
 }
 
 /* Visa kryssknappen när #about är målet */
-#about:target .close-fullscreen, img {
+#about:target .close-fullscreen, img,
+#kontakt:target .close-fullscreen {
     display: block; /* Visa kryssknappen när #about är målet */
     margin-right: 30px; /* Justera detta värde för önskad marginal */
+}
+
+#about:target ~ .menu-button, .bar,
+#kontakt:target ~ .menu-button, .bar {
+    display: none; /* Döljer kryssknappen när inne i "target" kontakt och about. */
 }
