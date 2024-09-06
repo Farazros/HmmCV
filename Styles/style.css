@@ -72,11 +72,6 @@ nav {
     margin-bottom: 20px; /* Lägg till marginal under knappen för att separera texten */
 }
 
-/* Stil för texten */
-.about , .about p {
-    margin: 1; /* Ta bort eventuell standardmarginal för att undvika oönskade mellanrum */
-}
-
 h2 {
     color: #003366; /* Mörkblå för rubriker */
 }
